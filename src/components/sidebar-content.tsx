@@ -1,4 +1,3 @@
-// sidebar-content.tsx
 import { Moon, Sun } from "lucide-react";
 import {
 	Sidebar,
@@ -22,8 +21,8 @@ interface AppSidebarProps {
 
 export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 	return (
-		<Sidebar className="dark:border-red-primary/60 dark:bg-background dark:text-foreground">
-			<SidebarHeader>
+		<Sidebar className="border-red-primary/60 w-[300px] bg-background dark:bg-background dark:text-foreground transition-all duration-300 ease-in-out">
+			<SidebarHeader className="bg-background">
 				<SidebarMenu>
 					<SidebarMenuItem>
 						<SidebarMenuButton className="justify-between" size="lg" asChild>
@@ -32,7 +31,7 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 									<div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
 										<img src="/memoji.png" alt="memoji" />
 									</div>
-									<div className="flex flex-col gap-0.5 leading-none">
+									<div className="flex flex-col gap-0.5 leading-none ml-1">
 										<span className="font-semibold">Portfolio</span>
 										<span className="text-xs">v2.0.0 (November, 2024)</span>
 									</div>
@@ -63,13 +62,16 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 					</SidebarMenuItem>
 				</SidebarMenu>
 			</SidebarHeader>
-			<SidebarContent>
+			<SidebarContent className="bg-background">
 				<SidebarGroup>
 					<SidebarMenu>
 						{sidebarData.navMain.map((section) => (
 							<SidebarMenuItem key={section.title}>
 								<SidebarMenuButton asChild>
-									<a href={section.url} className="font-medium">
+									<a
+										href={section.url}
+										className="font-medium hover:text-red-primary transition-colors ease-in-out duration-100"
+									>
 										{section.title}
 									</a>
 								</SidebarMenuButton>
@@ -78,7 +80,12 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 										{section.items.map((item) => (
 											<SidebarMenuSubItem key={item.title}>
 												<SidebarMenuSubButton asChild isActive={item.isActive}>
-													<a href={item.url}>{item.title}</a>
+													<a
+														href={item.url}
+														className="hover:text-red-primary transition-colors ease-in-out duration-100"
+													>
+														{item.title}
+													</a>
 												</SidebarMenuSubButton>
 											</SidebarMenuSubItem>
 										))}

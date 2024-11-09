@@ -85,7 +85,13 @@
 	* {
 		@apply border-border;
 	}
+	html {
+		scroll-behavior: smooth;
+	}
 	body {
 		@apply bg-background text-foreground;
+	}
+	[role="dialog"] {
+		--sidebar-width: 15rem !important;
 	}
 }

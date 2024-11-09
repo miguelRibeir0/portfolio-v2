@@ -1,16 +1,16 @@
 {
 	"navMain": [
 		{
-			"title": "Getting Started",
+			"title": "Who am I?",
 			"url": "#",
 			"items": [
 				{
-					"title": "Installation",
-					"url": "#"
+					"title": "About me",
+					"url": "#2"
 				},
 				{
 					"title": "Project Structure",
-					"url": "#"
+					"url": "#3"
 				}
 			]
 		},
@@ -95,42 +95,6 @@
 				},
 				{
 					"title": "Edge Runtime",
-					"url": "#"
-				}
-			]
-		},
-		{
-			"title": "Architecture",
-			"url": "#",
-			"items": [
-				{
-					"title": "Accessibility",
-					"url": "#"
-				},
-				{
-					"title": "Fast Refresh",
-					"url": "#"
-				},
-				{
-					"title": "Next.js Compiler",
-					"url": "#"
-				},
-				{
-					"title": "Supported Browsers",
-					"url": "#"
-				},
-				{
-					"title": "Turbopack",
-					"url": "#"
-				}
-			]
-		},
-		{
-			"title": "Community",
-			"url": "#",
-			"items": [
-				{
-					"title": "Contribution Guide",
 					"url": "#"
 				}
 			]
