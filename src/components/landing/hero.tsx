@@ -19,7 +19,7 @@ export function Hero() {
 	}, []);
 
 	return (
-		<div className="w-full h-screen flex flex-col-reverse md:flex-row md:flex-wrap items-center justify-center gap-x-32 relative mt-20 sm:mt-0">
+		<div className="w-full h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0">
 			<div className="w-[250px] md:w-[400px]">
 				<div className="self-start mt-14">
 					<h3
@@ -35,14 +35,14 @@ export function Hero() {
 					<p>Hello there!</p>
 					<p>
 						I'm a full-stack developer from Portugal with a deep passion for web
-						development and its endless possibilities. Over the years, I've
+						development and its ever changing environment. Over the years, I've
 						honed my skills across a wide range of technologies, consistently
 						seeking out opportunities to learn and innovate!
 					</p>
 				</div>
 			</div>
 			<div className="relative">
-				<div className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
+				<div className="max-w-[300px] h-[250px] md:w-[500px] md:h-[500px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
 					<img
 						src="/perfil.webp"
 						alt="How I look!"
