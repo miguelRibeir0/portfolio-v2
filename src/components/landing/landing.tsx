@@ -1,3 +1,4 @@
+import { Hero } from "./hero";
 import { AboutMe } from "./about-me";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { AppSidebar } from "@/components/sidebar-content";
@@ -18,6 +19,7 @@ export function Landing() {
 					aria-label="Toggle sidebar"
 				/>
 				<section className="transition-all duration-300 ease-in-out">
+					<Hero />
 					<AboutMe />
 					<div
 						className="w-full h-screen flex items-center justify-center"
