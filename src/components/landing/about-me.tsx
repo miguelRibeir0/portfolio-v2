@@ -5,10 +5,10 @@ const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
 export function AboutMe() {
 	return (
 		<div
-			className="w-full flex items-center justify-center flex-wrap pt-[50px] md:pt-[200px]"
+			className="w-full flex items-center justify-center flex-wrap pt-[50px] md:pt-[150px]"
 			id="2"
 		>
-			<div className="max-w-[75%]">
+			<div className="max-w-[75%] md:max-w-[60%]">
 				<div className="flex justify-between gap-x-10">
 					<div className="w-[250px] h-[250px] md:w-[800px] md:h-[500px] rounded-lg overflow-hidden relative md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] hidden lg:block">
 						<img
@@ -43,7 +43,7 @@ export function AboutMe() {
 							continue blending these skills and contribute to meaningful
 							projects.
 						</p>
-						<div className="flex items-start justify-start gap-x-4 mt-10">
+						<div className="flex items-center justify-start gap-x-4 mt-10">
 							<a
 								href="https://github.com/miguelRibeir0"
 								target="_blank"
@@ -51,7 +51,7 @@ export function AboutMe() {
 							>
 								<img
 									src={`${cdnEndpoint}/Portfolio/SVGS/Github.svg`}
-									className="w-9 cursor-pointer invert dark:invert-0"
+									className="w-7 cursor-pointer invert dark:invert-0 opacity-75 dark:opacity-90"
 									alt="Github"
 								/>
 							</a>
@@ -62,7 +62,7 @@ export function AboutMe() {
 							>
 								<img
 									src={"/linkedin.svg"}
-									className="w-9 cursor-pointer invert dark:invert-0 ml-2"
+									className="w-7 cursor-pointer invert dark:invert-0 opacity-75 dark:opacity-90 ml-2"
 									alt="LinkedIn"
 								/>
 							</a>
@@ -73,7 +73,7 @@ export function AboutMe() {
 							>
 								<Tooltip id="CV" opacity={1} />
 								<p
-									className="text-3xl w-fit cursor-pointer"
+									className="text-2xl w-fit cursor-pointer"
 									data-tooltip-id="CV"
 									data-tooltip-content="CV"
 								>

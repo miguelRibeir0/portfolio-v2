@@ -1,5 +1,7 @@
 import { Hero } from "./hero";
 import { AboutMe } from "./about-me";
+import { Tools } from "./tools";
+import { Goals } from "./goals";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { AppSidebar } from "@/components/sidebar-content";
 import {
@@ -21,18 +23,8 @@ export function Landing() {
 				<section className="transition-all duration-300 ease-in-out">
 					<Hero />
 					<AboutMe />
-					<div
-						className="w-full h-screen flex items-center justify-center"
-						id="2"
-					>
-						<h1 className="text-3xl">hello world2!!</h1>
-					</div>
-					<div
-						className="w-full h-screen flex items-center justify-center"
-						id="3"
-					>
-						<h1 className="text-3xl">hello world3!!</h1>
-					</div>
+					<Tools />
+					<Goals />
 				</section>
 			</SidebarInset>
 		</SidebarProvider>
