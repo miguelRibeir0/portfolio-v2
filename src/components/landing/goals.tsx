@@ -36,7 +36,7 @@ export function Goals() {
 					className="text-4xl font-bold text-center"
 				>
 					MY GOALS
-					<p className="text-base font-normal text-center mb-32 mt-10">
+					<p className="text-base font-normal text-center md:mb-32 mb-24 mt-10">
 						Everything I wish to acomplish in the nearby future
 					</p>
 				</motion.h1>

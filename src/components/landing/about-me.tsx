@@ -12,7 +12,7 @@ export function AboutMe() {
 				<div className="flex justify-between gap-x-10">
 					<div className="w-[250px] h-[250px] md:w-[800px] md:h-[500px] rounded-lg overflow-hidden relative md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] hidden lg:block">
 						<img
-							src="/perfil-2.webp"
+							src={`${cdnEndpoint}/Portfolio/profile-3.webp`}
 							alt="Me in a car!"
 							className="w-full h-full object-cover object-right"
 						/>
@@ -62,7 +62,7 @@ export function AboutMe() {
 							>
 								<img
 									src={"/linkedin.svg"}
-									className="w-7 cursor-pointer invert dark:invert-0 opacity-75 dark:opacity-90 ml-2"
+									className="w-7 cursor-pointer invert dark:invert-0 opacity-75 dark:opacity-90 ml-1"
 									alt="LinkedIn"
 								/>
 							</a>

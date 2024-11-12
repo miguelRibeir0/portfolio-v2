@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 const titles = ["Frontend", "Backend", "Full-Stack"];
+const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
 
 export function Hero() {
 	const [titleIndex, setTitleIndex] = useState(0);
@@ -20,7 +21,7 @@ export function Hero() {
 
 	return (
 		<div className="w-full h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0">
-			<div className="w-[250px] md:w-[400px]">
+			<div className="w-[300px] md:w-[400px]">
 				<div className="self-start mt-14">
 					<h3
 						className={`transition-all duration-1000 text-center md:text-left ease-in-out text-[2.7rem] leading-10 md:text-7xl font-semibold uppercase ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}
@@ -42,15 +43,15 @@ export function Hero() {
 				</div>
 			</div>
 			<div className="relative">
-				<div className="max-w-[300px] h-[250px] md:w-[500px] md:h-[500px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
+				<div className="w-[200px] h-[250px] md:w-[500px] md:h-[500px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
 					<img
-						src="/perfil.webp"
+						src={`${cdnEndpoint}/Portfolio/profile-2.webp`}
 						alt="How I look!"
 						className="w-full h-full object-cover"
 					/>
 				</div>
 				<img
-					src="/memoji.png"
+					src={"/memoji.png"}
 					alt="A memoji of me!"
 					className="head-bop absolute top-[68%] -left-14  md:top-[73%] md:-left-20 w-28 md:w-40"
 				/>

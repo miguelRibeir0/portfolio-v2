@@ -1,46 +1,48 @@
 export function Tools() {
+	const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
+
 	const technologies = [
 		{
 			name: "React",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/React.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/React.svg`,
 		},
 		{
 			name: "TypeScript",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/TypeScript.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/TypeScript.svg`,
 		},
 		{
 			name: "Node.js",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/NodeJS.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/NodeJS.svg`,
 		},
 		{
 			name: "Tailwind CSS",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/TailwindCSS.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/TailwindCSS.svg`,
 		},
 		{
 			name: "MongoDB",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/MongoDB.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/MongoDB.svg`,
 		},
 		{
 			name: "ExpressJS",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/ExpressJS.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/ExpressJS.svg`,
 			invertD: true,
 		},
 		{
 			name: "PostgreSQL",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/PostgresSQL.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/PostgresSQL.svg`,
 		},
 		{
 			name: "ShadCN",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/shadcn-ui.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/shadcn-ui.svg`,
 			invert: true,
 		},
 		{
 			name: "Angular",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Angular.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/Angular.svg`,
 		},
 		{
 			name: "JavaScript",
-			logo: "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Js.svg",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/Js.svg`,
 		},
 	];
 
