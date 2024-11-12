@@ -32,16 +32,16 @@ export function AboutMe() {
 						<p className="mt-5 md:text-base leading-relaxed text-sm">
 							I've worked with a variety of technologies, including TypeScript,
 							React, Angular, Node.js, and Express, and I'm always looking to
-							learn something new that I can add to my stack.
+							learn something new that I can add to my stack. Besides my
+							fascination for everything code related I also love to explore
+							other facets of web development such as AI/ Machine Learning, the
+							Cloud and DevOps.
 						</p>
 
 						<p className="mt-5 md:text-base leading-relaxed text-sm">
-							Balancing design and development has given me a unique
-							perspective. Whether it's debugging code or redesigning a
-							interface, I try to approach each task with creativity and
-							attention to detail. I'm excited to find opportunities where I can
-							continue blending these skills and contribute to meaningful
-							projects.
+							I love to apply everything from my previous UI/UX experience to
+							all my projects, ensuring that every application I build is not
+							only functional but also delivers a great user experience.
 						</p>
 						<div className="flex items-center justify-start gap-x-4 mt-10">
 							<a

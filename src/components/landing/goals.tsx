@@ -15,10 +15,9 @@ export function Goals() {
 			dark: true,
 		},
 		{
-			image:
-				"https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Code.svg",
+			image: "/robot.svg",
 			goal: "Go deeper into Machine Learning",
-			light: true,
+			dark: true,
 		},
 		{
 			image:
@@ -51,14 +50,15 @@ export function Goals() {
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.5, delay: index * 0.2 }}
 							viewport={{ once: true }}
-							key={index}
+							key={goal.goal}
 							className="mb-12 flex items-center w-full"
 						>
 							<div className="w-1/2 text-right pr-14 md:pr-20 flex items-end justify-end">
-								<div className="flex flex-col items-end w-fit md:p-6 bg-white dark:bg-transparent rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+								<div className="flex flex-col items-end w-fit md:p-6 dark:bg-transparent rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
 									<img
 										src={goal.image}
-										className={`md:w-12 w-10 ${goal.dark ? "dark:invert" : "invert-0"} ${goal.light ? "bg-black" : ""}`}
+										className={`md:w-12 w-10 ${goal.dark ? "dark:invert" : "invert-0"} `}
+										alt="One of my goals"
 									/>
 								</div>
 							</div>
