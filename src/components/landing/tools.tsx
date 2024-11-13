@@ -59,14 +59,14 @@ export function Tools() {
 					{technologies.map((tech) => (
 						<div
 							key={tech.name}
-							className="group flex flex-col items-center justify-center p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+							className="group flex flex-col items-center justify-center p-4 rounded-lg shadow-md dark:shadow-sm dark:bg-black/10 dark:shadow-red-primary/60 dark:hover:shadow-red-primary/20 dark:hover:shadow-lg hover:shadow-lg transition-all duration-300"
 						>
 							<img
 								src={tech.logo}
 								alt={tech.name}
-								className={`w-32 h-16 mb-4 ${tech.invert ? "dark:invert invert-0" : ""} ${tech.invertD ? "invert dark:invert-0" : ""}`}
+								className={`md:w-32 w-24 h-16 mb-4 ${tech.invert ? "dark:invert invert-0" : ""} ${tech.invertD ? "invert dark:invert-0" : ""}`}
 							/>
-							<span className="dark:text-lg text-base font-medium transition-all duration-300 dark:group-hover:font-black">
+							<span className="dark:md:text-lg text-sm md:text-base font-medium transition-all duration-300">
 								{tech.name}
 							</span>
 						</div>

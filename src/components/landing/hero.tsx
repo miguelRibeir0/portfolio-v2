@@ -53,7 +53,7 @@ export function Hero() {
 				<img
 					src={"/memoji.png"}
 					alt="A memoji of me!"
-					className="head-bop absolute top-[68%] -left-14  md:top-[73%] md:-left-20 w-28 md:w-40"
+					className="head-bop absolute top-[75%] -left-10  md:top-[73%] md:-left-20 w-20 md:w-40"
 				/>
 			</div>
 		</div>

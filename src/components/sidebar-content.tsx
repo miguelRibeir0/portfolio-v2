@@ -68,11 +68,11 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 				<SidebarGroup>
 					<SidebarMenu>
 						{sidebarData.navMain.map((section) => (
-							<SidebarMenuItem key={section.title}>
-								<SidebarMenuButton asChild>
+							<SidebarMenuItem key={section.title} className="w-fit">
+								<SidebarMenuButton asChild className="w-fit">
 									<a
 										href={section.url}
-										className="font-medium hover:text-red-primary transition-colors ease-in-out duration-100"
+										className="font-medium hover:text-red-primary transition-colors ease-in-out duration-100 w-fit"
 									>
 										{section.title}
 									</a>
@@ -84,7 +84,7 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 												<SidebarMenuSubButton asChild isActive={item.isActive}>
 													<a
 														href={item.url}
-														className="hover:text-red-primary transition-colors ease-in-out duration-100"
+														className="hover:text-red-primary transition-colors ease-in-out duration-100 w-fit"
 													>
 														{item.title}
 													</a>

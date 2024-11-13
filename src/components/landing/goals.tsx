@@ -54,7 +54,7 @@ export function Goals() {
 							className="mb-12 flex items-center w-full"
 						>
 							<div className="w-1/2 text-right pr-14 md:pr-20 flex items-end justify-end">
-								<div className="flex flex-col items-end w-fit md:p-6 dark:bg-transparent rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+								<div className="flex flex-col items-end p-6 dark:bg-black/10 dark:shadow-red-primary/70 dark:shadow-sm dark:hover:shadow-lg rounded-xl shadow-lg hover:shadow-xl dark:hover:shadow-red-primary/20 transition-shadow duration-300">
 									<img
 										src={goal.image}
 										className={`md:w-12 w-10 ${goal.dark ? "dark:invert" : "invert-0"} `}

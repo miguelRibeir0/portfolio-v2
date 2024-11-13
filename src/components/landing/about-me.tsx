@@ -22,14 +22,14 @@ export function AboutMe() {
 						<h2 className="md:text-5xl text-4xl uppercase font-semibold mb-10 md:mt-0">
 							About Me
 						</h2>
-						<p className="md:text-base leading-relaxed text-sm">
+						<p className="md:text-base leading-relaxed">
 							I'm a former graphic designer who found a new passion in web
 							development, and I've been hooked ever since. I love taking on new
 							challenges and diving into projects, and I recently completed an
 							advanced master's in Full Stack Web Development and Digital
 							Marketing.
 						</p>
-						<p className="mt-5 md:text-base leading-relaxed text-sm">
+						<p className="mt-5 md:text-base leading-relaxed">
 							I've worked with a variety of technologies, including TypeScript,
 							React, Angular, Node.js, and Express, and I'm always looking to
 							learn something new that I can add to my stack. Besides my
@@ -38,7 +38,7 @@ export function AboutMe() {
 							Cloud and DevOps.
 						</p>
 
-						<p className="mt-5 md:text-base leading-relaxed text-sm">
+						<p className="mt-5 md:text-base leading-relaxed">
 							I love to apply everything from my previous UI/UX experience to
 							all my projects, ensuring that every application I build is not
 							only functional but also delivers a great user experience.
@@ -62,7 +62,7 @@ export function AboutMe() {
 							>
 								<img
 									src={"/linkedin.svg"}
-									className="w-7 cursor-pointer invert dark:invert-0 opacity-75 dark:opacity-90 ml-1"
+									className="w-7 cursor-pointer invert dark:invert-0 opacity-75 dark:opacity-90"
 									alt="LinkedIn"
 								/>
 							</a>
