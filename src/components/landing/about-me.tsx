@@ -8,7 +8,7 @@ export function AboutMe() {
 			className="w-full flex items-center justify-center flex-wrap pt-[50px] md:pt-[150px]"
 			id="2"
 		>
-			<div className="max-w-[75%] md:max-w-[60%]">
+			<div className="max-w-[75%] md:max-w-[60%] md:text-left hyphens-auto text-justify break-words tracking-normal">
 				<div className="flex justify-between gap-x-10">
 					<div className="w-[250px] h-[250px] md:w-[800px] md:h-[500px] rounded-lg overflow-hidden relative md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] hidden lg:block">
 						<img

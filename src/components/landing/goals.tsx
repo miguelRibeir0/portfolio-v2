@@ -63,7 +63,7 @@ export function Goals() {
 								</div>
 							</div>
 
-							<div className="w-1/2 flex justify-start md:pl-20 pl-10 relative">
+							<div className="w-1/2 flex text-sm md:text-base justify-start md:pl-20 pl-10 relative">
 								<motion.p whileHover={{ scale: 1.2 }} className="font-semibold">
 									{goal.goal}
 								</motion.p>

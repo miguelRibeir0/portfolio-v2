@@ -20,7 +20,7 @@
 		},
 		{
 			"title": "Projects",
-			"url": "#",
+			"url": "/projects",
 			"items": [
 				{
 					"title": "Routing",
