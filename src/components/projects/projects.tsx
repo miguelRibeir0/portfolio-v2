@@ -5,7 +5,7 @@ import {
 	SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { useDarkMode } from "../../hooks/useDarkMode";
-import { ProjectsGrid } from "./projetcts-grid";
+import { ProjectsGrid } from "./projects-grid";
 
 export function Projects() {
 	const [isDark, setIsDark] = useDarkMode();

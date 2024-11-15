@@ -2,54 +2,57 @@
 	"navMain": [
 		{
 			"title": "Who am I?",
-			"url": "#",
+			"url": "/#",
 			"items": [
 				{
 					"title": "About me",
-					"url": "#2"
+					"url": "/#2"
 				},
 				{
 					"title": "My tools",
-					"url": "#3"
+					"url": "/#3"
 				},
 				{
 					"title": "My goals",
-					"url": "#4"
+					"url": "/#4"
 				}
 			]
 		},
 		{
 			"title": "Projects",
-			"url": "/projects",
+			"url": "/projects#",
 			"items": [
 				{
-					"title": "Routing",
-					"url": "#"
+					"title": "AI-Battle",
+					"url": "/projects#AI-Battle"
 				},
 				{
-					"title": "Data Fetching",
-					"url": "#",
-					"isActive": true
+					"title": "Weather-App",
+					"url": "/projects#Weather-App"
 				},
 				{
-					"title": "Rendering",
-					"url": "#"
+					"title": ".admin",
+					"url": "/projects#.admin"
 				},
 				{
-					"title": "Caching",
-					"url": "#"
+					"title": "Dragon Repeller",
+					"url": "/projects#Dragon Repeller"
 				},
 				{
-					"title": "Styling",
-					"url": "#"
+					"title": "Meme-Maker",
+					"url": "/projects#Meme-Maker"
 				},
 				{
-					"title": "Optimizing",
-					"url": "#"
+					"title": "Personal-Website",
+					"url": "/projects#Personal-Website"
 				},
 				{
-					"title": "Configuring",
-					"url": "#"
+					"title": "Tobis Creative Factory",
+					"url": "/projects#Tobis Creative Factory"
+				},
+				{
+					"title": "AI-SQL-Generator",
+					"url": "/projects#AI-SQL-Generator"
 				}
 			]
 		},
