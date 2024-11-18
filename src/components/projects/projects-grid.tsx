@@ -17,7 +17,7 @@ export function ProjectsGrid() {
 		<div className="w-full min-h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left hyphens-auto text-justify break-words tracking-normal">
 			{projects?.map((project) => (
 				<section
-					className="xl:w-[50%] w-[80%] p-5 lg:p-10 flex flex-col mt-16 mb-16 rounded-lg shadow-md dark:shadow-sm dark:shadow-red-primary/70"
+					className="2xl:w-[60%] w-[80%] lg:w-[90%] p-5 lg:p-10 flex flex-col mt-16 mb-16 rounded-lg shadow-md dark:shadow-sm dark:shadow-red-primary/70"
 					key={project.Title}
 					id={project.Title}
 				>
@@ -53,7 +53,7 @@ export function ProjectsGrid() {
 									))}
 								</div>
 								<Tooltip id="CODE" opacity={1} />
-								<a href={project.WebsiteLink} target="_blank" rel="noreferrer">
+								<a href={project.CodeLink} target="_blank" rel="noreferrer">
 									<img
 										src="https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Code.svg"
 										alt="code icon"
