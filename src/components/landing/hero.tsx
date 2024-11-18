@@ -20,7 +20,7 @@ export function Hero() {
 	}, []);
 
 	return (
-		<div className="w-full h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left pl-10 lg:pl-0 hyphens-auto text-justify break-words tracking-normal">
+		<div className="w-full h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left hyphens-auto text-justify break-words tracking-normal">
 			<div className="w-[300px] md:w-[400px]">
 				<div className="self-start mt-14">
 					<h3
