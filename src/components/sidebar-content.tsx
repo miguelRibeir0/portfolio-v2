@@ -81,7 +81,7 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 									<SidebarMenuSub>
 										{section.items.map((item) => (
 											<SidebarMenuSubItem key={item.title}>
-												<SidebarMenuSubButton asChild isActive={item.isActive}>
+												<SidebarMenuSubButton>
 													<a
 														href={item.url}
 														className="hover:text-red-primary transition-colors ease-in-out duration-100 w-fit"

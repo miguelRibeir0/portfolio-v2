@@ -13,9 +13,20 @@ export function ProjectsGrid() {
 		return <ProjectsGridLoading />;
 	}
 
+	interface Project {
+		Title: string;
+		BackgroundImage: string;
+		Description: string;
+		MainLanguage?: string;
+		SecondaryLanguages: string[];
+		WebsiteLink: string;
+		url: string;
+		CodeLink: string;
+	}
+
 	return (
 		<div className="w-full min-h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left hyphens-auto text-justify break-words tracking-normal">
-			{projects?.map((project) => (
+			{projects?.map((project: Project) => (
 				<section
 					className="2xl:w-[60%] w-[80%] lg:w-[90%] p-5 lg:p-10 flex flex-col mt-16 mb-16 rounded-lg shadow-md dark:shadow-sm dark:shadow-red-primary/70"
 					key={project.Title}
