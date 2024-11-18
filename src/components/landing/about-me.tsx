@@ -14,7 +14,7 @@ export function AboutMe() {
 						<img
 							src={`${cdnEndpoint}/Portfolio/profile-3.webp`}
 							alt="Me in a car!"
-							className="w-full h-full object-cover object-right"
+							className="w-full h-full md:object-cover object-[80%_center]"
 						/>
 					</div>
 

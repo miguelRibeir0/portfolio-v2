@@ -20,7 +20,7 @@ export function Hero() {
 	}, []);
 
 	return (
-		<div className="w-full h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left hyphens-auto text-justify break-words tracking-normal">
+		<div className="w-full h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left pl-10 lg:pl-0 hyphens-auto text-justify break-words tracking-normal">
 			<div className="w-[300px] md:w-[400px]">
 				<div className="self-start mt-14">
 					<h3
@@ -43,7 +43,7 @@ export function Hero() {
 				</div>
 			</div>
 			<div className="relative">
-				<div className="w-[200px] h-[250px] md:w-[500px] md:h-[500px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
+				<div className="w-[200px] h-[250px] md:w-[300px] md:h-[350px] xl:w-[500px] xl:h-[500px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
 					<img
 						src={`${cdnEndpoint}/Portfolio/profile-2.webp`}
 						alt="How I look!"
