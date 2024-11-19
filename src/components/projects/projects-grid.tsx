@@ -28,7 +28,7 @@ export function ProjectsGrid() {
 		<div className="w-full min-h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left hyphens-auto text-justify break-words tracking-normal">
 			{projects?.map((project: Project) => (
 				<section
-					className="2xl:w-[60%] w-[80%] lg:w-[90%] p-5 lg:p-10 flex flex-col mt-16 mb-16 rounded-lg shadow-md dark:shadow-sm dark:shadow-red-primary/70"
+					className="2xl:w-[60%] w-[80%] lg:w-[90%] lg:ml-10 p-5 2xl:ml-0 lg:p-10 flex flex-col mt-16 mb-16 rounded-lg shadow-md dark:shadow-sm dark:shadow-red-primary/70"
 					key={project.Title}
 					id={project.Title}
 				>
@@ -36,7 +36,7 @@ export function ProjectsGrid() {
 						<img
 							src={project.BackgroundImage}
 							alt="Project Snapshot"
-							className="2xl:w-[400px] lg:w-[300px] w-full text- rounded-lg"
+							className="2xl:w-[400px] lg:w-[300px] w-full object-cover rounded-lg"
 						/>
 						<div className="lg:w-1 w-0 bg-gradient-to-b from-red-400 to-red-primary ml-10" />
 						<div className="lg:ml-10 lg:mt-0 mt-10 w-full flex flex-col justify-between">
@@ -59,8 +59,19 @@ export function ProjectsGrid() {
 									{project.MainLanguage && (
 										<img src={project.MainLanguage} alt="" className="w-5" />
 									)}
-									{project.SecondaryLanguages.map((tech) => (
-										<img src={tech} alt="" className="w-5" key={`${tech}`} />
+									{/* Need to filter because the DB contains empty arrays */}
+									{project?.SecondaryLanguages?.filter(
+										(tech) => tech && tech.trim() !== "",
+									).map((tech) => (
+										<img
+											src={tech}
+											alt={"Technology icon"}
+											className="w-5"
+											key={tech}
+											onError={(e) => {
+												e.currentTarget.style.display = "none";
+											}}
+										/>
 									))}
 								</div>
 								<Tooltip id="CODE" opacity={1} />

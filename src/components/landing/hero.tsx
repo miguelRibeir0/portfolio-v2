@@ -43,7 +43,7 @@ export function Hero() {
 				</div>
 			</div>
 			<div className="relative">
-				<div className="w-[200px] h-[250px] md:w-[300px] md:h-[350px] xl:w-[500px] xl:h-[500px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
+				<div className="w-[200px] h-[250px] md:w-[300px] md:h-[350px] xl:w-[400px] xl:h-[450px] 2xl:w-[500px] 2xl:h-[550px] rounded-lg overflow-hidden md:shadow-[12px_12px_30px_-15px_hsl(var(--red-primary)/_0.2)] relative">
 					<img
 						src={`${cdnEndpoint}/Portfolio/profile-2.webp`}
 						alt="How I look!"
