@@ -59,6 +59,15 @@
 		{
 			"title": "Contact Me",
 			"url": "/contact-me"
+		},
+		{
+			"title": "CV",
+			"url": "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/CV-Miguel-Ribeiro.pdf",
+			"external": true
+		},
+		{
+			"title": "ChangeLog",
+			"url": "/changelog"
 		}
 	]
 }

@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Landing } from "./components/landing/landing";
 import { Projects } from "./components/projects/projects";
 import { ContactMe } from "./components/contact-me/contact-me";
+import { ChangeLog } from "./components/changelog/changelog";
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
 		element: (
 			<>
 				<ContactMe />
+			</>
+		),
+	},
+	{
+		path: "/changelog",
+		element: (
+			<>
+				<ChangeLog />
 			</>
 		),
 	},

@@ -717,6 +717,7 @@ const SidebarMenuSubButton = React.forwardRef<
 		asChild?: boolean;
 		size?: "sm" | "md";
 		isActive?: boolean;
+		external?: boolean;
 	}
 >(({ asChild = false, size = "md", isActive, className, ...props }, ref) => {
 	const Comp = asChild ? Slot : "a";

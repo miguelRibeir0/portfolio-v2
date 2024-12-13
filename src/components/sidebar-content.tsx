@@ -1,4 +1,4 @@
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, FileSymlink } from "lucide-react";
 import {
 	Sidebar,
 	SidebarContent,
@@ -19,6 +19,13 @@ interface AppSidebarProps {
 	setIsDark: (value: boolean) => void;
 }
 
+interface SidebarItem {
+	title: string;
+	url: string;
+	external?: boolean;
+	items?: SidebarItem[];
+}
+
 export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 	return (
 		<Sidebar className="border-r-red-primary/60 w-[300px] bg-background dark:bg-background dark:text-foreground transition-all duration-300 ease-in-out">
@@ -34,7 +41,7 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 										</div>
 										<div className="flex flex-col gap-0.5 leading-none ml-1">
 											<span className="font-semibold">Portfolio</span>
-											<span className="text-xs">v2.0.0 (November, 2024)</span>
+											<span className="text-xs">v2.0.1 (December, 2024)</span>
 										</div>
 									</a>
 								</div>
@@ -67,14 +74,18 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 			<SidebarContent className="bg-background">
 				<SidebarGroup>
 					<SidebarMenu>
-						{sidebarData.navMain.map((section) => (
+						{sidebarData.navMain.map((section: SidebarItem) => (
 							<SidebarMenuItem key={section.title} className="w-fit">
 								<SidebarMenuButton asChild className="w-fit">
 									<a
 										href={section.url}
 										className="font-medium hover:text-red-primary transition-colors ease-in-out duration-100 w-fit"
+										target={`${section.external ? "_blank" : "_self"}`}
 									>
 										{section.title}
+										{section.external ? (
+											<FileSymlink className="opacity-80" />
+										) : null}
 									</a>
 								</SidebarMenuButton>
 								{section.items?.length ? (
@@ -86,7 +97,7 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 														href={item.url}
 														className="hover:text-red-primary transition-colors ease-in-out duration-100 w-fit"
 													>
-														{item.title}
+														{item.title}{" "}
 													</a>
 												</SidebarMenuSubButton>
 											</SidebarMenuSubItem>
