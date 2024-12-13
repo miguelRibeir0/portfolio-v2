@@ -1,5 +1,3 @@
-import { Tooltip } from "react-tooltip";
-
 const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
 
 export function AboutMe() {
@@ -65,20 +63,6 @@ export function AboutMe() {
 									className="w-7 cursor-pointer invert dark:invert-0 opacity-75 dark:opacity-90"
 									alt="LinkedIn"
 								/>
-							</a>
-							<a
-								href={`${cdnEndpoint}/Portfolio/CV-Miguel-Ribeiro.pdf`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<Tooltip id="CV" opacity={1} />
-								<p
-									className="text-2xl w-fit cursor-pointer"
-									data-tooltip-id="CV"
-									data-tooltip-content="CV"
-								>
-									📝
-								</p>
 							</a>
 						</div>
 					</div>
