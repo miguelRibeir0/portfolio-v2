@@ -41,7 +41,7 @@ export function AppSidebar({ isDark, setIsDark }: AppSidebarProps) {
 										</div>
 										<div className="flex flex-col gap-0.5 leading-none ml-1">
 											<span className="font-semibold">Portfolio</span>
-											<span className="text-xs">v2.0.1 (December, 2024)</span>
+											<span className="text-xs">v2.0.2 (January, 2025)</span>
 										</div>
 									</a>
 								</div>

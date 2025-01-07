@@ -44,6 +44,11 @@ export function Tools() {
 			name: "JavaScript",
 			logo: `${cdnEndpoint}/Portfolio/SVGS/Js.svg`,
 		},
+		{
+			name: "NextJS",
+			logo: `${cdnEndpoint}/Portfolio/SVGS/NextJS(2).svg`,
+			invert: true,
+		},
 	];
 
 	return (
@@ -64,7 +69,9 @@ export function Tools() {
 							<img
 								src={tech.logo}
 								alt={tech.name}
-								className={`md:w-32 w-24 h-16 mb-4 ${tech.invert ? "dark:invert invert-0" : ""} ${tech.invertD ? "invert dark:invert-0" : ""}`}
+								className={`md:w-32 w-24 h-16 mb-4 ${
+									tech.invert ? "dark:invert invert-0" : ""
+								} ${tech.invertD ? "invert dark:invert-0" : ""}`}
 							/>
 							<span className="dark:md:text-lg text-sm md:text-base font-medium transition-all duration-300">
 								{tech.name}
