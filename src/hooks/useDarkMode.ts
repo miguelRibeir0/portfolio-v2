@@ -1,30 +1,39 @@
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from 'react';
 
-export function useDarkMode() {
-	const [isDark, setIsDark] = useState(() => {
-		const stored = localStorage.getItem("isDark");
-		return stored ? JSON.parse(stored) : true;
-	});
+function getSnapshot(): boolean {
+  const stored = localStorage.getItem('isDark');
+  if (stored) {
+    try {
+      return JSON.parse(stored) === true;
+    } catch (e) {
+      console.error('Error parsing isDark from localStorage', e);
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+  }
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
 
-	// Handling system preferences and localStorage
-	useEffect(() => {
-		const media = window.matchMedia("(prefers-color-scheme: dark)");
+function subscribe(callback: () => void): () => void {
+  window.addEventListener('storage', callback);
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  mediaQuery.addEventListener('change', callback);
+  return () => {
+    window.removeEventListener('storage', callback);
+    mediaQuery.removeEventListener('change', callback);
+  };
+}
 
-		// If we are at Stage 0 use system preferences
-		if (!localStorage.getItem("isDark")) {
-			setIsDark(media.matches);
-		}
+export function useDarkMode(): [boolean, (value: boolean) => void] {
+  const isDark = useSyncExternalStore(subscribe, getSnapshot);
 
-		const handler = (e: MediaQueryListEvent) => {
-			setIsDark(e.matches);
-		};
+  const setIsDark = (value: boolean) => {
+    localStorage.setItem('isDark', JSON.stringify(value));
+    document.documentElement.classList.toggle('dark', value);
+  };
 
-		media.addEventListener("change", handler);
-		document.documentElement.classList.toggle("dark", isDark);
-		localStorage.setItem("isDark", JSON.stringify(isDark));
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark);
+  }, [isDark]);
 
-		return () => media.removeEventListener("change", handler);
-	}, [isDark]);
-
-	return [isDark, setIsDark] as const;
+  return [isDark, setIsDark];
 }

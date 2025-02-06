@@ -1,27 +1,85 @@
-import { AppSidebar } from "@/components/sidebar-content";
-import {
-	SidebarInset,
-	SidebarProvider,
-	SidebarTrigger,
-} from "@/components/ui/sidebar";
-import { useDarkMode } from "../../hooks/useDarkMode";
-import { ProjectsGrid } from "./projects-grid";
+import { useQuery } from '@tanstack/react-query';
+import { getProjects } from './dbfetch';
+import { Tooltip } from 'react-tooltip';
+import { ProjectsGridLoading } from './projects-grid-loading';
+import type { Project } from '../../types/types';
 
 export function Projects() {
-	const [isDark, setIsDark] = useDarkMode();
+  const { data: projects, isLoading } = useQuery({
+    queryKey: ['projects'],
+    queryFn: getProjects,
+  });
 
-	return (
-		<SidebarProvider defaultOpen={true}>
-			<AppSidebar isDark={isDark} setIsDark={setIsDark} />
-			<SidebarInset>
-				<SidebarTrigger
-					className="fixed top-4 left-4 z-50 md:hidden bg-background dark:bg-background hover:bg-accent rounded-lg p-2"
-					aria-label="Toggle sidebar"
-				/>
-				<section className="transition-all duration-300 ease-in-out">
-					<ProjectsGrid />
-				</section>
-			</SidebarInset>
-		</SidebarProvider>
-	);
+  if (isLoading) {
+    return <ProjectsGridLoading />;
+  }
+  return (
+    <section className="transition-all duration-300 ease-in-out">
+      <div className="w-full min-h-screen flex flex-col-reverse lg:flex-row lg:flex-wrap items-center justify-center gap-x-32 relative mt-10 sm:mt-0 md:text-left hyphens-auto text-justify break-words tracking-normal">
+        {projects?.map((project: Project) => (
+          <section
+            className="2xl:w-[60%] w-[80%] lg:w-[90%] lg:ml-10 p-5 2xl:ml-0 lg:p-10 flex flex-col mt-16 mb-16 rounded-lg shadow-md dark:shadow-sm dark:shadow-red-primary/70"
+            key={project.Title}
+            id={project.Title}
+          >
+            <div className="w-full flex lg:flex-row flex-col">
+              <img
+                src={project.BackgroundImage}
+                alt="Project Snapshot"
+                className="2xl:w-[400px] lg:w-[300px] w-full object-cover rounded-lg"
+              />
+              <div className="lg:w-1 w-0 bg-gradient-to-b from-red-400 to-red-primary ml-10" />
+              <div className="lg:ml-10 lg:mt-0 mt-10 w-full flex flex-col justify-between">
+                <div className="lg:text-base text-sm">
+                  <h2 className="lg:text-2xl text-xl uppercase font-bold mb-3">
+                    {project.Title}
+                  </h2>
+                  <a
+                    href={project.WebsiteLink}
+                    className="text-red-primary/60 hover:text-red-primary transition-all duration-300 ease-in-out"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.WebsiteLink}
+                  </a>
+                  <p className="w-[90%] mt-5">{project.Description}</p>
+                </div>
+                <div className="flex justify-between items-center lg:mt-5 mt-10">
+                  <div className="flex lg:gap-x-4 gap-x-2 ">
+                    {project.MainLanguage && (
+                      <img src={project.MainLanguage} alt="" className="w-5" />
+                    )}
+                    {/* Need to filter because the DB contains empty arrays */}
+                    {project?.SecondaryLanguages?.filter(
+                      (tech) => tech && tech.trim() !== ''
+                    ).map((tech) => (
+                      <img
+                        src={tech}
+                        alt={'Technology icon'}
+                        className="w-5"
+                        key={tech}
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <Tooltip id="CODE" opacity={1} />
+                  <a href={project.CodeLink} target="_blank" rel="noreferrer">
+                    <img
+                      src="https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Code.svg"
+                      alt="code icon"
+                      className="w-5"
+                      data-tooltip-id="CODE"
+                      data-tooltip-content="Source Code"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+  );
 }
