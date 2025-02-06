@@ -1,5 +1,6 @@
 import { useEffect, useSyncExternalStore } from 'react';
 
+// getting the initial value
 function getSnapshot(): boolean {
   const stored = localStorage.getItem('isDark');
   if (stored) {
@@ -13,6 +14,7 @@ function getSnapshot(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
+// listening for changes
 function subscribe(callback: () => void): () => void {
   window.addEventListener('storage', callback);
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
