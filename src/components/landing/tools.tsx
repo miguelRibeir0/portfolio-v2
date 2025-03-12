@@ -52,10 +52,10 @@ export function Tools() {
   ];
 
   return (
-    <div className="w-full h-screen flex items-center justify-center mt-10 md:mt-0">
+    <div className="w-full h-screen flex items-center justify-center mt-10">
       <div className="md:max-w-[60%]">
         <h2
-          className="md:text-5xl text-center text-3xl uppercase font-semibold mb-20 md:mt-0 md:mb-32 pt-[350px] md:pt-[200px]"
+          className="md:text-5xl text-center text-3xl uppercase font-semibold mb-20 md:mt-0 md:mb-32 pt-[400px] md:pt-[200px]"
           id="3"
         >
           My Current Tools
